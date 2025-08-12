@@ -1,0 +1,293 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(ellipse at center, #1a1a2e 0%, #0f0f0f 70%);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Interactive background elements */
+.bg-interactive {
+  position: relative;
+  background: radial-gradient(ellipse at center, #1a1a2e 0%, #0f0f0f 70%);
+}
+
+.bg-interactive::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(162, 89, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 107, 157, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 60% 20%, rgba(162, 89, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Floating particles */
+.floating-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(162, 89, 255, 0.3);
+  border-radius: 50%;
+  animation: float-particle 20s infinite linear;
+}
+
+.particle:nth-child(1) {
+  width: 4px;
+  height: 4px;
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 15s;
+}
+
+.particle:nth-child(2) {
+  width: 6px;
+  height: 6px;
+  left: 20%;
+  animation-delay: 2s;
+  animation-duration: 18s;
+}
+
+.particle:nth-child(3) {
+  width: 3px;
+  height: 3px;
+  left: 70%;
+  animation-delay: 4s;
+  animation-duration: 22s;
+}
+
+.particle:nth-child(4) {
+  width: 5px;
+  height: 5px;
+  left: 90%;
+  animation-delay: 6s;
+  animation-duration: 16s;
+}
+
+.particle:nth-child(5) {
+  width: 4px;
+  height: 4px;
+  left: 50%;
+  animation-delay: 8s;
+  animation-duration: 20s;
+}
+
+@keyframes float-particle {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Orbital animation for floating icons */
+.orbital-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.orbital-path {
+  position: absolute;
+  border: 2px solid rgba(162, 89, 255, 0.2);
+  border-radius: 50%;
+  animation: rotate 20s linear infinite;
+}
+
+.orbital-path-1 {
+  width: 350px;
+  height: 350px;
+  top: 25px;
+  left: 25px;
+}
+
+.orbital-path-2 {
+  width: 300px;
+  height: 300px;
+  top: 50px;
+  left: 50px;
+  animation-duration: 15s;
+  animation-direction: reverse;
+}
+
+.orbital-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgba(162, 89, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(162, 89, 255, 0.5);
+  animation: counter-rotate 20s linear infinite;
+}
+
+.orbital-icon-2 {
+  animation-duration: 15s;
+  animation-direction: reverse;
+}
+
+.orbital-icon-1 {
+  top: -25px;
+  left: calc(50% - 25px);
+}
+
+.orbital-icon-2 {
+  animation: counter-rotate-reverse 15s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes counter-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes counter-rotate-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.glow-purple {
+  box-shadow: 0 0 30px rgba(162, 89, 255, 0.4);
+}
+
+.glow-purple-hover:hover {
+  box-shadow: 0 0 40px rgba(162, 89, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #a259ff, #ff6b9d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.floating-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+.section-enter {
+  animation: fade-in 0.8s ease-in-out, slide-up 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Glass morphism effect */
+.glass-card {
+  background: rgba(26, 26, 46, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(162, 89, 255, 0.2);
+}
+
+/* Improved button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #a259ff, #ff6b9d);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+/* Enhanced navbar */
+.navbar-blur {
+  background: rgba(15, 15, 15, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(162, 89, 255, 0.1);
+}
+
+/* Typography consistency */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p, span, div {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+/* Ensure consistent font rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
