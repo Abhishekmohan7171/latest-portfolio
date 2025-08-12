@@ -65,19 +65,29 @@ export class ProjectsComponent {
   projects = [
     {
       id: 1,
+      title: '🌸 MoodBloom',
+      description: 'An interactive mood tracking platform using Angular and Tailwind CSS to help users log and analyze their emotional well-being over time. Features include mood logging with customizable triggers and activities, historical mood visualization with analytics dashboards, gratitude journaling, wellness resources, and daily reminders. Implemented responsive UI with Tailwind CSS, state management in Angular, and data persistence to ensure a seamless user experience across devices.',
+      technologies: ['Angular', 'TypeScript', 'Tailwind CSS'],
+      github: 'https://github.com/Abhishekmohan7171/Mood-Bloom',
+      demo: 'https://moodbloom-7171.web.app/'
+    },
+    {
+      id: 2,
       title: 'Hotel Checkout App (EzOrder)',
       description: 'A comprehensive hotel management system with menu management and real-time order display functionality built with Angular and Firebase.',
       technologies: ['Angular', 'Firebase', 'TypeScript', 'Tailwind CSS'],
       github: 'https://github.com/Abhishekmohan7171/EzOrder',
       demo: null
     },
+    
     {
-      id: 2,
+      id: 3,
       title: 'ng-terminal-typing-effect',
       description: 'An npm package that provides CLI-like typing animations for Angular applications, enhancing developer and user experience.',
       technologies: ['Angular', 'TypeScript', 'NPM Package', 'Animation'],
       github: 'https://github.com/Abhishekmohan7171/ng-terminal-typing-effect',
       demo: 'https://www.npmjs.com/package/ng-terminal-typing-effect'
-    }
+    },
+    
   ];
 }
