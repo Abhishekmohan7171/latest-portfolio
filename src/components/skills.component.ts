@@ -26,10 +26,12 @@ import { CommonModule } from '@angular/common';
           </p>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           @for (skill of skills; track skill.name) {
             <div class="glass-card rounded-xl p-6 text-center hover:border-primary transition-all duration-300 glow-purple-hover section-enter group">
-              <div class="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">{{ skill.icon }}</div>
+              <div class="mb-3 group-hover:scale-110 transition-transform duration-300 flex justify-center">
+                <img *ngIf="skill.iconPath" [src]="skill.iconPath" [alt]="skill.name + ' icon'" class="w-10 h-10 object-contain" />
+              </div>
               <h3 class="text-sm font-semibold text-white">{{ skill.name }}</h3>
             </div>
           }
@@ -40,17 +42,21 @@ import { CommonModule } from '@angular/common';
 })
 export class SkillsComponent {
   skills = [
-    { name: 'TypeScript', icon: '📘' },
-    { name: 'JavaScript', icon: '🟨' },
-    { name: 'Angular', icon: '🅰️' },
-    { name: 'NestJS', icon: '🐱' },
-    { name: 'Tailwind', icon: '🎨' },
-    { name: 'Firebase', icon: '🔥' },
-    { name: 'MongoDB', icon: '🍃' },
-    { name: 'SQL', icon: '🗄️' },
-    { name: 'REST APIs', icon: '🔌' },
-    { name: 'UI/UX', icon: '🎯' },
-    { name: 'Git', icon: '📝' },
-    { name: 'Node.js', icon: '💚' }
+    { name: 'TypeScript', iconPath: 'assets/typescript.png' },
+    { name: 'JavaScript', iconPath: 'assets/js.png' },
+    { name: 'HTML', iconPath: 'assets/html-5.png' },
+    { name: 'CSS', iconPath: 'assets/css-3.png' },
+    { name: 'Figma', iconPath: 'assets/figma.svg' },
+    { name: 'Angular', iconPath: 'assets/angular.png' },
+    { name: 'NestJS', iconPath: 'assets/nest.png' },
+    { name: 'Tailwind', iconPath: 'assets/tailwind.svg' },
+    { name: 'Firebase', iconPath: 'assets/firebase.png' },
+    { name: 'MongoDB', iconPath: 'assets/mongo.png' },
+    { name: 'SQL', iconPath: 'assets/mysql.png' },
+    { name: 'REST APIs', iconPath: 'assets/api.png' },
+    { name: 'UI/UX', iconPath: 'assets/ui.png' },
+    { name: 'Git', iconPath: 'assets/git.png' },
+    { name: 'Node.js', iconPath: 'assets/node-js.png' }
   ];
+  
 }

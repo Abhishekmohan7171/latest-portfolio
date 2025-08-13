@@ -52,18 +52,24 @@ export class CertificationsComponent {
   certifications = [
     {
       id: 1,
+      name: 'Backend engineering Launchpad',
+      issuer: 'Airtribe',
+      year: '2025'
+    },
+    {
+      id: 2,
       name: 'Data Science for Engineers',
       issuer: 'NPTEL',
       year: '2021'
     },
     {
-      id: 2,
+      id: 3,
       name: 'Postman API Fundamentals',
       issuer: 'Postman',
       year: '2022'
     },
     {
-      id: 3,
+      id: 4,
       name: 'Machine Learning',
       issuer: 'Verzeo',
       year: '2021'

@@ -11,16 +11,17 @@ import { CommonModule } from '@angular/common';
         <div class="flex justify-between items-center h-16">
           <!-- Logo/Brand -->
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center overflow-hidden relative">
-              <!-- Memoji positioned to stand out from the circle -->
-              <div class="absolute -top-2 left-1/2 transform -translate-x-1/2 w-10 h-10 z-10">
-                <img 
-                  src="/memoji-about.webp" 
+          <!-- <img 
+                  src="src/assets/logo.png" 
                   alt="Abhishek Mohan A" 
                   class="w-full h-full object-contain drop-shadow-lg"
                   style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                />
+                /> -->
+            <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center overflow-hidden relative">
+              <!-- Memoji positioned to stand out from the circle -->
+              <div class="absolute -top-2 left-1/2 transform -translate-x-1/2 w-10 h-10 z-10">
+                
                 <!-- Fallback if image doesn't load -->
                 <div class="w-full h-full bg-gradient-to-br from-gray-700 to-gray-800 rounded-full flex items-center justify-center text-xs font-bold text-primary" style="display: none;">
                   AM

@@ -67,12 +67,20 @@ export class ProjectsComponent {
       id: 1,
       title: '🌸 MoodBloom',
       description: 'An interactive mood tracking platform using Angular and Tailwind CSS to help users log and analyze their emotional well-being over time. Features include mood logging with customizable triggers and activities, historical mood visualization with analytics dashboards, gratitude journaling, wellness resources, and daily reminders. Implemented responsive UI with Tailwind CSS, state management in Angular, and data persistence to ensure a seamless user experience across devices.',
-      technologies: ['Angular', 'TypeScript', 'Tailwind CSS'],
+      technologies: ['Angular', 'TypeScript', 'Tailwind CSS','LocalStorage'],
       github: 'https://github.com/Abhishekmohan7171/Mood-Bloom',
       demo: 'https://moodbloom-7171.web.app/'
     },
     {
       id: 2,
+      title: 'CycleCast – Menstrual Cycle Tracker',
+      description:'Developed a responsive menstrual cycle tracking web application using Angular and Tailwind CSS, with data persistence via localStorage. The app allows users to log period dates, flow intensity, symptoms, and additional notes, and provides a calendar view with predicted cycles and fertile windows. Implemented quick action shortcuts, detailed logging forms, and a clean, user-friendly interface for enhanced usability. Designed with a mobile-first approach, ensuring smooth navigation and clear visual indicators for different cycle phases.',
+      technologies: ['Angular', 'TypeScript', 'Tailwind CSS','LocalStorage'],
+      github: 'https://github.com/Abhishekmohan7171/CycleCast',
+      demo: 'https://cyclecast-7171.web.app/dashboard'
+    },
+    {
+      id: 3,
       title: 'Hotel Checkout App (EzOrder)',
       description: 'A comprehensive hotel management system with menu management and real-time order display functionality built with Angular and Firebase.',
       technologies: ['Angular', 'Firebase', 'TypeScript', 'Tailwind CSS'],
@@ -81,7 +89,7 @@ export class ProjectsComponent {
     },
     
     {
-      id: 3,
+      id: 4,
       title: 'ng-terminal-typing-effect',
       description: 'An npm package that provides CLI-like typing animations for Angular applications, enhancing developer and user experience.',
       technologies: ['Angular', 'TypeScript', 'NPM Package', 'Animation'],
